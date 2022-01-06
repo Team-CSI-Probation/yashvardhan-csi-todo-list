@@ -87,6 +87,53 @@ body{
 }
 
 
+
+/* css for */
+/* after adding task by java-script */
+#todos .todo-list-container{
+    list-style: none;
+    margin: 10px 0 0;
+}
+#todos .todo-list-container .todo-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#todos .todo-list-container .todo-list .todo-item{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 40px;
+    padding: 0 10px;
+    outline: none;
+    border: none;    
+    cursor: pointer;
+}
+#todos .todo-list-container .todo-list .button{
+    position: absolute;
+    right: 0;
+}
+#todos .todo-list-container .todo-list .button button{
+    width: 40px;
+    height: 50px;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+#todos .todo-list-container .todo-list .button .completed{
+    background-color: #3ec282;
+}
+#todos .todo-list-container .todo-list .button .trash{
+    background-color: rgb(236, 58, 58); 
+    
+}
+
+
 @media screen and (max-width: 600px){
     #todos{
         width: 100%;
