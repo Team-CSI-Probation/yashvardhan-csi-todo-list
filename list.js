@@ -19,7 +19,7 @@ if(addelement.value.trim()){
 
     /* li - tag */
     var litag = document.createElement('li');
-    litag.innerText = addelement.value;
+    litag.innerHTML = addelement.value;
     litag.classList.add('todo-item');
 
     /* Button Div */
