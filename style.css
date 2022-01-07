@@ -34,21 +34,7 @@ body{
     color: rgb(10, 226, 125); 
     /* color: rgb(97, 243, 122); */
 }
-#todos .heading h1::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 0;
-    width: 10%;
-    height: 2px;
-    background-color:rgb(10, 226, 125);;
-    transition: .5s;
-}
-#todos .heading h1:hover::after{
-    width: 100%;
-}
+
 /* css for container */
 #todos .todo-input-container{
     width: 100%;
