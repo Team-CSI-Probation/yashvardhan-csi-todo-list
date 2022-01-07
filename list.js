@@ -75,12 +75,12 @@ if(addelement.value.trim()){
         }
         else if(selectbtn.classList[0]==='trash')
         {
-            var ft1_li = selectbtn.parentElement;
-            var ft2_cont = ft1_li.parentElement;
-            var ft3_ul = ft2_cont.parentElement;
-            ft3_ul.classList.add('delbtn');
-            ft3_ul.addEventListener('transitionend', function(){
-                ft3_ul.remove();
+            var ft1 = selectbtn.parentElement;
+            var ft2 = ft1.parentElement;
+            var ft3 = ft2.parentElement;
+            ft3.classList.add('delbtn');
+            ft3.addEventListener('transitionend', function(){
+                ft3.remove();
             });
 
         }
