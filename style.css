@@ -134,6 +134,23 @@ body{
 }
 
 
+#todos .todo-list-container .todo-list .button button i{
+    pointer-events: none;
+}
+.linethrough{
+    text-decoration: line-through;
+    transition: .3s;
+}
+
+.editBtn{
+    background-color: rgb(86, 62, 193);
+}
+
+.delbtn{
+    opacity: 0 !important;
+    transform: translateY(30px);
+    transition: .5s;
+}
 @media screen and (max-width: 600px){
     #todos{
         width: 100%;

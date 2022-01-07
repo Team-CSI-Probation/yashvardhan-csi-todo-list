@@ -36,11 +36,22 @@ if(addelement.value.trim()){
     editbtn.classList.add('editBtn');
     editbtn.innerHTML = '<i class="far fa-edit"></i>';
     
+    /* edit the task */
+    editbtn.onclick = function(){
+        edittask(litag);
+    }
+
     /* delete button */
     var delbtn = document.createElement('button');
     delbtn.classList.add('trash');
     delbtn.innerHTML = '<i class="fas fa-trash"></i>';
     
+    delbtn.onclick = function()
+    {
+        confirm("Are you sure to delete the task ?");
+    }
+ 
+
     /* append all element according to related parents */
     ultag.appendChild(todoList);
     todoList.appendChild(litag);
@@ -52,5 +63,51 @@ if(addelement.value.trim()){
     /* append all element(ul-tag) with main container */
     addtocontainer.appendChild(ultag);
 
+     /* completed btn  */
+     todoList.addEventListener('click',function(s){
+        var selectbtn = s.target;
+        if(selectbtn.classList[0]==='completed')
+        {
+            var ft1 = selectbtn.parentElement;
+            var ft2 = ft1.parentElement;
+            ft2.classList.add('linethrough');
+
+        }
+        else if(selectbtn.classList[0]==='trash')
+        {
+            var ft1_li = selectbtn.parentElement;
+            var ft2_cont = ft1_li.parentElement;
+            var ft3_ul = ft2_cont.parentElement;
+            ft3_ul.classList.add('delbtn');
+            ft3_ul.addEventListener('transitionend', function(){
+                ft3_ul.remove();
+            });
+
+        }
+     })
+    
+
+/*after adding task erase input bar */
+addelement.value = '';
 }
+
+else if(addelement.value === '')
+{
+    alert("You cannot add a task without filing it.")
+}
+
+
 })
+
+
+function edittask(e){
+    var editValue = prompt('Edit the selected task', e.firstChild.nodeValue);
+    e.firstChild.nodeValue = editValue;
+}
+function deleteAllElements(){
+    var getultag = document.querySelectorAll('.todo-list-container');
+    
+    for(var i = 0; i < getultag.length; i++){
+    getultag[i].remove();
+    }
+}
