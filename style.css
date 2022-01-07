@@ -147,7 +147,7 @@ body{
 }
 
 .delbtn{
-    opacity: 0 !important;
+    opacity: 0;
     transform: translateY(30px);
     transition: .5s;
 }
