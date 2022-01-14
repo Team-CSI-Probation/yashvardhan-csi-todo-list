@@ -46,12 +46,7 @@ if(addelement.value.trim()){
     delbtn.classList.add('trash');
     delbtn.innerHTML = '<i class="fas fa-trash"></i>';
     
-    delbtn.onclick = function()
-    {
-        confirm("Are you sure to delete the task ?");
-    }
- 
-
+    
     /* append all element according to related parents */
     ultag.appendChild(todoList);
     todoList.appendChild(litag);
